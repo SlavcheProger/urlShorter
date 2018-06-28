@@ -1,0 +1,11 @@
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\bin\Debug\netcoreapp2.0\UrlShorter.deps.json
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\bin\Debug\netcoreapp2.0\UrlShorter.runtimeconfig.json
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\bin\Debug\netcoreapp2.0\UrlShorter.runtimeconfig.dev.json
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\bin\Debug\netcoreapp2.0\UrlShorter.dll
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\bin\Debug\netcoreapp2.0\UrlShorter.pdb
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\obj\Debug\netcoreapp2.0\UrlShorter.csproj.CoreCompileInputs.cache
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\obj\Debug\netcoreapp2.0\UrlShorter.AssemblyInfoInputs.cache
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\obj\Debug\netcoreapp2.0\UrlShorter.AssemblyInfo.cs
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\obj\Debug\netcoreapp2.0\UrlShorter.dll
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\obj\Debug\netcoreapp2.0\UrlShorter.pdb
+C:\Users\Slavche\Desktop\bitly\UrlShorter\UrlShorter\obj\Debug\netcoreapp2.0\UrlShorter.csprojAssemblyReference.cache
