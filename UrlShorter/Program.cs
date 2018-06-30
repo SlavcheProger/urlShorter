@@ -9,28 +9,20 @@ using System.Xml;
 namespace UrlShorter
 {
     class Program
-    {
+    {   
         static void Main(string[] args)
         {
             var username = "slavche001";
             var apiKey = "R_82581e4222df41e3859b3262f1d2d3f0";
-            var longUrl = "https://www.youtube.com/results?search_query=async+await+c%23";
-
-            var shortUrl = ShortUrlGenerator(username, apiKey, longUrl).Result;
+            var longUrl = "https://github.com/SlavcheProger/urlShorter/tree/master/UrlShorter";
+            var shortUrl = CreateShortUrl(username, apiKey, longUrl).Result;
 
             Console.WriteLine(shortUrl);
             Console.ReadKey();
         }
-
-        public static async Task<string> ShortUrlGenerator(string username, string apiKey, string longUrl)
-        {
-            return await Task.FromResult<string>(CreateShortUrl(username, apiKey, longUrl));
-        }
-
-        public static string CreateShortUrl(string username, string apiKey, string longUrl)
+        public static async Task<String> CreateShortUrl(string username, string apiKey, string longUrl)
         {
             var xmlDoc = new XmlDocument();
-
             var request = WebRequest.Create("http://api.bitly.com/v3/shorten");
             var data = Encoding.UTF8.GetBytes(string.Format("login={0}&apiKey={1}&longUrl={2}&format={3}",
                 username, apiKey, HttpUtility.UrlEncode(longUrl), "xml"));
@@ -39,15 +31,15 @@ namespace UrlShorter
             request.ContentType = "application/x-www-form-urlencoded";
             request.ContentLength = data.Length;
 
-            using (var stream = request.GetRequestStream())
+            using (var stream = await request.GetRequestStreamAsync())
             {
-                stream.Write(data, 0, data.Length);
+                await stream.WriteAsync(data, 0, data.Length);
             }
-            using (var response = request.GetResponse())
+            using (var response = await request.GetResponseAsync())
             {
                 using (var reader = new StreamReader(response.GetResponseStream()))
                 {
-                    xmlDoc.LoadXml(reader.ReadToEnd());
+                    xmlDoc.LoadXml(await reader.ReadToEndAsync());
                 }
             }
 
